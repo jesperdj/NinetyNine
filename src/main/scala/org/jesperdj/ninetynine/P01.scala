@@ -1,7 +1,10 @@
 package org.jesperdj.ninetynine
 
+import scala.annotation.tailrec
+
 object P01 {
 
+  @tailrec
   def last[T](xs: List[T]): T = xs match {
     case Nil => throw new NoSuchElementException("Empty list")
     case x :: Nil => x
