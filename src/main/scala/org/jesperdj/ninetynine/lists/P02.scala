@@ -1,4 +1,4 @@
-package org.jesperdj.ninetynine
+package org.jesperdj.ninetynine.lists
 
 import scala.annotation.tailrec
 
