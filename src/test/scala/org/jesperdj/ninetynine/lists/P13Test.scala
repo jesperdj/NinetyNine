@@ -15,6 +15,7 @@ class P13Test extends FlatSpec with Matchers {
 
   "encodeDirect()" should "return a list of tuples with the correct counts" in {
     encodeDirect(List(3, 3)) should be (List((2, 3)))
+    encodeDirect(List(4, 4, 4)) should be (List((3, 4)))
     encodeDirect(List('a, 'a, 'b)) should be (List((2, 'a), (1, 'b)))
     encodeDirect(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) should be (List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e)))
   }

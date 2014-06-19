@@ -15,6 +15,7 @@ class P09Test extends FlatSpec with Matchers {
 
   "pack()" should "return a list of lists grouped by consecutive duplicates" in {
     pack(List(2, 2)) should be (List(List(2, 2)))
+    pack(List(4, 4, 4)) should be (List(List(4, 4, 4)))
     pack(List('a, 'a, 'b)) should be (List(List('a, 'a), List('b)))
     pack(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) should be (List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e)))
   }

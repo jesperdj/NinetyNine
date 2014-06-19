@@ -15,6 +15,7 @@ class P08Test extends FlatSpec with Matchers {
 
   "compress()" should "remove consecutive duplicate elements" in {
     compress(List(2, 2)) should be (List(2))
+    compress(List(4, 4, 4)) should be (List(4))
     compress(List('a, 'a, 'b)) should be (List('a, 'b))
     compress(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) should be (List('a, 'b, 'c, 'a, 'd, 'e))
   }
