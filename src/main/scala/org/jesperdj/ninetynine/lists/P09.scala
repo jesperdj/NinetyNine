@@ -10,7 +10,7 @@ object P09 {
     case x1 :: x2 :: tail if x1 != x2 =>
       List(x1) :: pack(x2 :: tail)
 
-    case x :: Nil => List(List(x))
+    case _ :: Nil => List(xs)
 
     case Nil => Nil
   }
